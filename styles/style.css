@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: #e8d9d6;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template:
+    "container-seccion2" 50%
+    "container-seccion1" 50%
+    "container-seccion3";
+}
+.container-seccion1 {
+  grid-area: container-seccion1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10%;
+}
+
+.flower-seccion1 {
+  width: 30%;
+  position: absolute;
+  left: 5%;
+  top: -45%;
+}
+.container-seccion2 {
+  grid-area: container-seccion2;
+  height: 35vh;
+  position: relative;
+  animation-name: cafe;
+  animation-duration: 3s;
+}
+@keyframes cafe {
+  0% {
+    opacity: 0;
+    top: -600px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+.back-seccion2 {
+  width: 70%;
+  position: absolute;
+  right: 0;
+}
+.group48-seccion2 {
+  width: 60%;
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 35%;
+}
+.group49-seccion2 {
+  width: 36%;
+  position: absolute;
+  z-index: 2;
+  left: 47%;
+  top: 3%;
+}
+
+.container-seccion3 {
+  grid-area: container-seccion3;
+  padding: 1%;
+  gap: 10px;
+  display: flex;
+}
+.container-seccion3 img {
+  width: 40%;
+}
+.item-container {
+  display: flex;
+  background-color: #fcf8f5;
+  border-radius: 50px;
+}
+.subitem {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.subitem p {
+  font-size: 50%;
+}
+.flower-seccion1 {
+  position: absolute;
+}
+a {
+  text-decoration: none;
+  color: white;
+  background-color: #261908;
+  padding: 2%;
+  border-radius: 20px;
+  text-align: center;
+  width: 30%;
+}
+
+a:hover {
+  scale: 1.05;
+  background-color: rgb(197, 122, 47);
+  transition-duration: 1s;
+}
+.item-container:hover {
+  background-color: #6d0d4775;
+  transition-duration: 3s;
+  box-shadow: 7px 7px 10px #251807;
+}
+h1 {
+  color: #251807;
+  transition-duration: 2s;
+}
+h1:hover {
+  color: #b46d10;
+  scale: 1.1;
+}
+h2 {
+  font-size: 100%;
+}
+.container-seccion3 p {
+  font-size: 10px;
+}
+
+@media (min-width: 780px) {
+  .container {
+    grid-template:
+      "container-seccion1 container-seccion2"
+      "container-seccion3 container-seccion3";
+  }
+  .container-seccion1 {
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10%;
+    width: 100%;
+    height: 70vh;
+    padding: 5%;
+    margin: 0;
+  }
+  .container-seccion2 {
+    width: 70vh;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .back-seccion2 {
+    width: 70vh;
+    position: absolute;
+    right: 0;
+  }
+  .group48-seccion2 {
+    width: 85%;
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 12%;
+  }
+  .group49-seccion2 {
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+    left: 30%;
+    top: 3%;
+  }
+  .flower-seccion1 {
+    width: 10%;
+    left: 5%;
+    top: 2%;
+  }
+  .container-seccion3 {
+    justify-content: center;
+    gap: 4%;
+  }
+  .item-container {
+    border-radius: 60px;
+    align-items: center;
+  }
+  .subitem {
+    padding: 2%;
+  }
+  .item-container p {
+    font-size: 1rem;
+    align-items: center;
+  }
+  .container-seccion3 img {
+    width: 30%;
+  }
+  h1 {
+    font-size: 4rem;
+    color: #251807;
+  }
+  p {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  a {
+    border-radius: 35px;
+  }
+}
